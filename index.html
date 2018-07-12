@@ -2,9 +2,18 @@
 
 <html lang="en">
 <head>
+	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-18482781-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-18482781-1');
+	</script>
 	<meta charset="utf-8">
 	<title> Malina Randrianavony</title>
-	<meta name="description" content="I am Malina, an engineer by trade, designer at heart and artist on occasions who believes magic happens at the intersection of functionality, beauty and meaning.">
+	<meta name="description" content="I am Malina Randrianavony, an engineer by trade, designer at heart and artist on occasions who believes magic happens at the intersection of functionality, beauty and meaning.">
 	<meta name="author" content="Malina Randrianavony">
 	<style>
 		body { color: #272890; }
@@ -15,7 +24,6 @@
 			display: inline-block;
 			transform: translateY(0.2rem);
 		}
-
 		header {
 			padding: 0 0 3em 0;
 			position: relative;
@@ -26,6 +34,7 @@
 			top: 0;
 			width: 100%;
 		}
+		p { line-height: 1.4em; }
 		polyline {
 			fill: none;
 			stroke: #272890;
@@ -41,7 +50,40 @@
 		.center { margin: 0 auto; }
 		.text-center { text-align: center; }
 		.hidden { visibility: hidden; }
-		#content { font-weight: bold; margin: 0 auto; margin-bottom: 150px;}
+		#content {
+			font-weight: bold;
+			margin: 0 auto;
+			margin-bottom: 150px;
+			animation-duration: 6s;
+			@-webkit-animation-duration: 6s;
+			@-moz-animation-duration: 6s;
+			@-o-animation-duration: 6s;
+			animation-name: fade-text;
+			@-webkit-animation-name: fade-text;
+			@-moz-animation-name: fade-text;
+			@-o-animation-name: fade-text;
+		}
+		@keyframes fade-text {
+			from { opacity: 0; }
+			50% { opacity: 0; }
+			to { opacity: 1; }
+		}
+		@-webkit-keyframes fade-text {
+			from { opacity: 0; }
+			50% { opacity: 0; }
+			to { opacity: 1; }
+		}
+		@-moz-keyframes fade-text {
+			from { opacity: 0; }
+			50% { opacity: 0; }
+			to { opacity: 1; }
+		}
+		@-o-keyframes fade-text {
+			from { opacity: 0; }
+			50% { opacity: 0; }
+			to { opacity: 1; }
+		}
+
 		.left-to-center, .right-to-center, .top-to-center { margin: 0 auto; }
 		.left-to-center, .right-to-center {
 			color: #272890;
@@ -288,21 +330,15 @@
 			to { opacity: 1 }
 		}
 
-		@media (max-width: 400px) {
-			header { margin-top: 30px; }
-			p { font-size: 1em; }
-			svg { width: 150px; }
-			#content { width: 250px; }
-		}
-		@media (min-width: 400px) and (max-width: 700px) {
+		@media (max-width: 700px) {
 			header { margin-top: 60px; }
-			p { font-size: 1.4em; }
+			p { font-size: 1.4em; margin-left: 30px; }
 			svg { width: 200px; }
-			#content { width: 300px; }
+			#content { width: 350px; }
 		}
 		@media (min-width: 700px) {
 			header { margin-top: 100px; }
-			p { font-size: 1.8em; }
+			p { font-size: 1.8em; margin-left: 50px; }
 			svg { width: 300px; }
 			#content { width: 500px; }
 		}
@@ -359,7 +395,7 @@
 
 	<div id="content">
 		<p class="text-center">Hi!</p>
-		<p>I am Malina, an engineer by trade, designer at <span  class="contrast">&#9829;</span> and artist on occasions who believes magic happens at the intersection of functionality, beauty and meaning.</p>
+		<p>I am Malina Randrianavony, an engineer by trade, designer at <span  class="contrast">&#9829;</span> and artist on occasions who believes magic happens at the intersection of functionality, beauty and meaning.</p>
 		<p>Born and grown up in Paris, France, from Malagasy parents, I'm now living in Colorado, mostly focusing on UX and creating digital products you can see at <a href="http://www.envisiondesigncode.com">Envision. Design. Code.</a> I also play piano, sing and dance hip-hop on a weekly basis.</p>
 		<p>I enjoy collaborating and sharing ideas so if you'd like to get together to brainstorm some ideas or work on an interesting project, I am accessible through <a href="https://www.linkedin.com/in/malinar"> LinkedIn </a> and <a href="mailto:malina.randrianavony@gmail.com"> email</a>. If you happen to speak or learn French, you could also join me at the <a href="https://www.meetup.com/Boulder-French-table-La-Table-Francophone-de-Boulder/"> Boulder French Table</a>.</p>
 	</div>
