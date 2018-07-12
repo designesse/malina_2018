@@ -4,102 +4,365 @@
 <head>
 	<meta charset="utf-8">
 	<title> Malina Randrianavony</title>
-	<meta name="description" content="Malina Randrianavony: born in Paris (France), artist on occasions, rooted in Madagascar, engineer by trade, based in Colorado, designer at heart, team player, constant work in progress.">
+	<meta name="description" content="I am Malina, an engineer by trade, designer at heart and artist on occasions who believes magic happens at the intersection of functionality, beauty and meaning.">
 	<meta name="author" content="Malina Randrianavony">
 	<style>
-		@import url(//fonts.googleapis.com/css?family=Questrial|Trocchi);
-		/* CSS reset inspired from https://github.com/vladocar/CSS-Mini-Reset/blob/master/CSS-Mini-Reset.css */
-		html, body, div, form, fieldset, legend, label {
-			margin: 0;
-			padding: 0;	
-		}
-
-		table {
-			border-collapse: collapse;
-			border-spacing: 0;
-		}
-
-		th, td {
-			text-align: left;
-			vertical-align: top;
-		}
-
-		img { border: 0; }
-
-		/* Own CSS */
-		body {
-			color: #999;
-			font-family: 'Trocchi', serif;
-			letter-spacing: .05em;
-		}
-
-		.box {
-			background-color: #fff;
-			border: 2px solid #f3d484;
-			margin: 100px auto;
-			padding: 0 10% 70px;
-			width: 40%;
-		}
-
-		h1 {
-			background-color: #fff;
-			color: #636ee2;
+		body { color: #272890; }
+		a { text-decoration: underline solid orange; }
+		a:link, a:visited { color: #272890; }
+		a:hover { color: #ffa500; }
+		a:active {
 			display: inline-block;
-			font-family: Questrial, sans-serif;			
-			font-size: 24px;
-			font-weight: bold;
-			margin-top: -20px;
-			text-transform: uppercase;
+			transform: translateY(0.2rem);
 		}
 
-		ol { 
-			margin-bottom: 40px;
-			padding-left: 0;
+		header {
+			padding: 0 0 3em 0;
+			position: relative;
 		}
-		ol li { 
-			list-style: none; 
-			margin-bottom: 5px;
+		header div {
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
 		}
-		ol.sentence li::after { content: ","; }
-		ol.sentence li:last-child::after { content: "."; }
-		ol.comma li::after { content: "."; }
+		polyline {
+			fill: none;
+			stroke: #272890;
+			stroke-width: 2;
+		}
+		polyline.color {
+			fill: black;
+			opacity: .03;
+		}
 
-		a {
-			color: #777;
-			border-bottom: 3px solid #f9eac2;
-			text-decoration: none;
+		.block { display: block; }
+		.contrast { color: #ffa500; }
+		.center { margin: 0 auto; }
+		.text-center { text-align: center; }
+		.hidden { visibility: hidden; }
+		#content { font-weight: bold; margin: 0 auto; margin-bottom: 150px;}
+		.left-to-center, .right-to-center, .top-to-center { margin: 0 auto; }
+		.left-to-center, .right-to-center {
+			color: #272890;
+			animation-duration: 1s;
+			@-webkit-animation-duration: 1s;
+			@-moz-animation-duration: 1s;
+			@-o-animation-duration: 1s;
 		}
+		.left-to-center {
+			animation-name: left-to-center;
+			@-webkit-animation-name: left-to-center;
+			@-moz-animation-name: left-to-center;
+			@-o-animation-name: left-to-center;
+		}
+		.right-to-center {
+			animation-name: right-to-center;
+			@-webkit-animation-name: right-to-center;
+			@-moz-animation-name: right-to-center;
+			@-o-animation-name: right-to-center;
+		}
+		.top-to-center {
+			color: #272890;
+			animation-duration: 2.5s;
+			@-webkit-animation-duration: 2.5s;
+			@-moz-animation-duration: 2.5s;
+			@-o-animation-duration: 2.5s;
+			animation-name: top-to-center;
+			@-webkit-name: top-to-center;
+			@-moz-name: top-to-center;
+			@-o-name: top-to-center;
+		}
+
+		@keyframes left-to-center {
+			from {
+				margin-left: 0%;
+				opacity: 0;
+				transform: translateX(0%);
+			}
+			to {
+				margin-left: 50%;
+				opacity: 1;
+				transform: translateX(-50%);
+			}
+		}
+		@-webkit-keyframes left-to-center {
+			from {
+				margin-left: 0%;
+				opacity: 0;
+				transform: translateX(0%);
+			}
+			to {
+				margin-left: 50%;
+				opacity: 1;
+				transform: translateX(-50%);
+			}
+		}
+		@-moz-keyframes left-to-center {
+			from {
+				margin-left: 0%;
+				opacity: 0;
+				transform: translateX(0%);
+			}
+			to {
+				margin-left: 50%;
+				opacity: 1;
+				transform: translateX(-50%);
+			}
+		}
+		@-o-keyframes left-to-center {
+			from {
+				margin-left: 0%;
+				opacity: 0;
+				transform: translateX(0%);
+			}
+			to {
+				margin-left: 50%;
+				opacity: 1;
+				transform: translateX(-50%);
+			}
+		}
+
+		@keyframes right-to-center {
+			from {
+			    margin-right: 0%;
+			    opacity: 0;
+			    transform: translateX(0%);
+			}
+			to {
+			    margin-right: 50%;
+			    opacity: 1;
+			    transform: translateX(50%);
+			}
+		}
+		@-webkit-keyframes right-to-center {
+			from {
+			    margin-right: 0%;
+			    opacity: 0;
+			    transform: translateX(0%);
+			}
+			to {
+			    margin-right: 50%;
+			    opacity: 1;
+			    transform: translateX(50%);
+			}
+		}
+		@-moz-keyframes right-to-center {
+			from {
+			    margin-right: 0%;
+			    opacity: 0;
+			    transform: translateX(0%);
+			}
+			to {
+			    margin-right: 50%;
+			    opacity: 1;
+			    transform: translateX(50%);
+			}
+		}
+		@-o-keyframes right-to-center {
+			from {
+			    margin-right: 0%;
+			    opacity: 0;
+			    transform: translateX(0%);
+			}
+			to {
+			    margin-right: 50%;
+			    opacity: 1;
+			    transform: translateX(50%);
+			}
+		}
+
+		@keyframes top-to-center {
+			from { margin-top: -200px; opacity: 0; }
+			to { margin-top: 0; opacity: 1; }
+		}
+		@-webkit-keyframes top-to-center {
+			from { margin-top: -200px; opacity: 0; }
+			to { margin-top: 0; opacity: 1; }
+		}
+		@-moz-keyframes top-to-center {
+			from { margin-top: -200px; opacity: 0; }
+			to { margin-top: 0; opacity: 1; }
+		}
+		@-o-keyframes top-to-center {
+			from { margin-top: -200px; opacity: 0; }
+			to { margin-top: 0; opacity: 1; }
+		}
+
+		.cross-1 {
+			fill: #aaa;
+			opacity: .5;
+			animation-duration: 2s;
+			@-webkit-animation-duration: 2s;
+			@-moz-animation-duration: 2s;
+			@-o-animation-duration: 2s;
+			animation-name: fade-1;
+			@-webkit-animation-name: fade-1;
+			@-moz-animation-name: fade-1;
+			@-o-animation-name: fade-1;
+		}
+		.cross-2 {
+			fill: #555;
+			opacity: .5;
+			animation-duration: 3s;
+			@-webkit-animation-duration: 3s;
+			@-moz-animation-duration: 3s;
+			@-o-animation-duration: 3s;
+			animation-name: fade-2;
+			@-webkit-animation-name: fade-2;
+			@-moz-animation-name: fade-2;
+			@-o-animation-name: fade-2;
+		}
+		.cross-3 {
+			fill: #ffa500;
+			opacity: 1;
+			animation-duration: 4s;
+			@-webkit-animation-duration: 4s;
+			@-moz-animation-duration: 4s;
+			@-o-animation-duration: 4s;
+			animation-name: fade-3;
+			@-webkit-animation-name: fade-3;
+			@-moz-animation-name: fade-3;
+			@-o-animation-name: fade-3;
+		}
+		@keyframes fade-1 {
+			from { opacity: 0; }
+			50% { opacity: 0; }
+			to { opacity: .5; }
+		}
+		@-webkit-keyframes fade-1 {
+			from { opacity: 0; }
+			50% { opacity: 0; }
+			to { opacity: .5; }
+		}
+		@-moz-keyframes fade-1 {
+			from { opacity: 0; }
+			50% { opacity: 0; }
+			to { opacity: .5; }
+		}
+		@-o-keyframes fade-1 {
+			from { opacity: 0; }
+			50% { opacity: 0; }
+			to { opacity: .5; }
+		}
+
+		@keyframes fade-2 {
+			from { opacity: 0; }
+			70% { opacity: 0; }
+			to { opacity: .5 }
+		}
+		@-webkit-keyframes fade-2 {
+			from { opacity: 0; }
+			70% { opacity: 0; }
+			to { opacity: .5 }
+		}
+		@-moz-keyframes fade-2 {
+			from { opacity: 0; }
+			70% { opacity: 0; }
+			to { opacity: .5 }
+		}
+		@-o-keyframes fade-2 {
+			from { opacity: 0; }
+			70% { opacity: 0; }
+			to { opacity: .5 }
+		}
+
+		@keyframes fade-3 {
+			from { opacity: 0; }
+			70% { opacity: 0; }
+			to { opacity: 1 }
+		}
+		@-webkit-keyframes fade-3 {
+			from { opacity: 0; }
+			70% { opacity: 0; }
+			to { opacity: 1 }
+		}
+		@-moz-keyframes fade-3 {
+			from { opacity: 0; }
+			70% { opacity: 0; }
+			to { opacity: 1 }
+		}
+		@-o-keyframes fade-3 {
+			from { opacity: 0; }
+			70% { opacity: 0; }
+			to { opacity: 1 }
+		}
+
+		@media (max-width: 400px) {
+			header { margin-top: 30px; }
+			p { font-size: 1em; }
+			svg { width: 150px; }
+			#content { width: 250px; }
+		}
+		@media (min-width: 400px) and (max-width: 700px) {
+			header { margin-top: 60px; }
+			p { font-size: 1.4em; }
+			svg { width: 200px; }
+			#content { width: 300px; }
+		}
+		@media (min-width: 700px) {
+			header { margin-top: 100px; }
+			p { font-size: 1.8em; }
+			svg { width: 300px; }
+			#content { width: 500px; }
+		}
+
 	</style>
 	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-		ga('create', 'UA-18482781-1', 'auto');
-		ga('send', 'pageview');
 	</script>
 </head>
 
 <body>
-	<div class="box">
-		<h1>Malina Randrianavony</h1>
-		<ol class="sentence">
-			<li>Born in Paris (France)</li>
-			<li>Artist on occasions</li>
-			<li>Rooted in Madagascar</li>
-			<li>Engineer by trade</li>
-			<li>Based in Colorado</li>
-			<li>Designer at &#9829</li>
-			<li>Team player</li>
-			<li>Work in progress</li>
-		</ol>
-		<ol class="comma">
-			<li>Meet me at <a href="https://www.meetup.com/CodeForBoulder" target="_blank">Code for Boulder</a> or <a href="https://www.meetup.com/Boulder-French-table-La-Table-Francophone-de-Boulder" target="_blank">Boulder French Table</a></li>
-			<li>Connect with me on <a href="https://www.linkedin.com/in/malinar" target="_blank">LinkedIn</a></li>
-			<li><a href="mailto:malinar@yahoo.com">Email me</a></li>
-		</ol>
-		More coming soon...
+	<header>
+		<svg class="block hidden" viewBox="0 0 180 100" xmlns="http://www.w3.org/2000/svg">
+			<polyline points="0,100 50,0 100,100" />
+			<polyline class="color" points="0,100 50,0 100,100" />
+			<polyline points="40,0 90,100 140,0" />
+			<polyline class="color" points="40,0 90,100 140,0" />
+			<polyline points="80,100 130,0 180,100" />
+			<polyline class="color" points="80,100 130,0 180,100" />
+		</svg>
+		<div>
+			<svg class="block left-to-center" viewBox="0 0 180 100" xmlns="http://www.w3.org/2000/svg">
+				<polyline points="0,100 50,0 100,100" />
+				<polyline class="color" points="0,100 50,0 100,100" />
+			</svg>
+		</div>
+		<div>
+			<svg class="block top-to-center" viewBox="0 0 180 100" xmlns="http://www.w3.org/2000/svg">
+				<polyline points="40,0 90,100 140,0" />
+				<polyline class="color" points="40,0 90,100 140,0" />
+			</svg>
+		</div>
+		<div>
+			<svg class="block right-to-center" viewBox="0 0 180 100" xmlns="http://www.w3.org/2000/svg">
+				<polyline points="80,100 130,0 180,100" />
+				<polyline class="color" points="80,100 130,0 180,100" />
+			</svg>
+		</div>
+		<div>
+			<svg class="block center cross-1" viewBox="0 0 180 100" xmlns="http://www.w3.org/2000/svg">
+				<polygon points="80,100 90,80 100,100" />
+			</svg>
+		</div>
+		<div>
+			<svg class="block center cross-2" viewBox="0 0 180 100" xmlns="http://www.w3.org/2000/svg">
+				<polygon points="90,100 45,10 50,0 90,80 130,0 135,10" />
+			</svg>
+		</div>
+		<div>
+			<svg class="block center cross-3" viewBox="0 0 180 100" xmlns="http://www.w3.org/2000/svg">
+				<polygon points="90,99 86,90 90,81 94,90" />
+			</svg>
+		</div>
+	</header>
 
+	<div id="content">
+		<p class="text-center">Hi!</p>
+		<p>I am Malina, an engineer by trade, designer at <span  class="contrast">&#9829;</span> and artist on occasions who believes magic happens at the intersection of functionality, beauty and meaning.</p>
+		<p>Born and grown up in Paris, France, from Malagasy parents, I'm now living in Colorado, mostly focusing on UX and creating digital products you can see at <a href="http://www.envisiondesigncode.com">Envision. Design. Code.</a> I also play piano, sing and dance hip-hop on a weekly basis.</p>
+		<p>I enjoy collaborating and sharing ideas so if you'd like to get together to brainstorm some ideas or work on an interesting project, I am accessible through <a href="https://www.linkedin.com/in/malinar"> LinkedIn </a> and <a href="mailto:malina.randrianavony@gmail.com"> email</a>. If you happen to speak or learn French, you could also join me at the <a href="https://www.meetup.com/Boulder-French-table-La-Table-Francophone-de-Boulder/"> Boulder French Table</a>.</p>
 	</div>
+
 </body>
 </html>
