@@ -1,0 +1,102 @@
+---
+---
+@import 'base';
+
+@mixin animation-duration($duration) {
+  @-moz-animation-duration: $duration;
+  @-ms-animation-duration: $duration;
+  @-o-animation-duration: $duration;
+  @-webkit-animation-duration: $duration;
+  animation-duration: $duration;
+}
+@mixin animation-name($animation) {
+  @-moz-animation-name: $animation;
+  @-ms-animation-name: $animation;
+  @-o-animation-name: $animation;
+  @-webkit-animation-name: $animation;
+  animation-name: $animation;
+}
+@mixin crossing-effect($color, $duration, $animation-name) {
+  fill: $color;
+  opacity: 1;
+  @include animation-duration($duration);
+  @include animation-name($animation-name);
+}
+@mixin fade-steps($from, $to) {
+  from { opacity: $from; }
+  50% { opacity: $from; }
+  to { opacity: $to; }
+}
+@mixin from-left-steps($st-mar-l, $st-transx, $fin-mar-l, $fin-transx) {
+  from {
+    margin-left: $st-mar-l;
+    opacity: 0;
+    transform: translateX($st-transx);
+  }
+  to {
+    margin-left: $fin-mar-l;
+    opacity: 1;
+    transform: translateX($fin-transx);
+  }
+}
+@mixin keyframes($animation) {
+  @-moz-keyframes #{$animation} { @content; }
+  @-ms-keyframes #{$animation} { @content; }
+  @-o-keyframes #{$animation} { @content; }
+  @-webkit-keyframes #{$animation} { @content; }
+  @keyframes #{$animation} { @content; }
+}
+
+#content {
+  font-weight: bold;
+  margin: 0 auto;
+  margin-bottom: 150px;
+  @include animation-duration(6s);
+  @include animation-name(fade-text);
+}
+
+@include keyframes(fade-text) { @include fade-steps(0, 1); }
+
+.left-to-center, .right-to-center, .top-to-center { margin: 0 auto; }
+.left-to-center, .right-to-center {
+  color: $text-color;
+  @include animation-duration(1s);
+}
+.left-to-center { @include animation-name(left-to-center); }
+.right-to-center { @include animation-name(right-to-center); }
+
+.top-to-center {
+  color: $text-color;
+  @include animation-duration(2.5s);
+  @include animation-name(top-to-center);
+}
+
+@include keyframes(left-to-center) { @include from-left-steps(0%, 0%, 50%, -50%); }
+
+@mixin from-right-steps($st-mar-r, $st-transx, $fin-mar-r, $fin-transx) {
+  from {
+    margin-right: $st-mar-r;
+    opacity: 0;
+    transform: translateX($st-transx);
+  }
+  to {
+    margin-right: $fin-mar-r;
+    opacity: 1;
+    transform: translateX($fin-transx);
+  }
+}
+
+@include keyframes(right-to-center) { @include from-right-steps(0%, 0%, 50%, 50%); }
+
+@include keyframes(top-to-center) {
+  from { margin-top: -200px; opacity: 0; }
+  to { margin-top: 0; opacity: 1; }
+}
+
+.cross-1 { @include crossing-effect(#ddd, 2s, fade-1); }
+.cross-2 { @include crossing-effect(#999, 3.5s, fade-2); }
+.cross-3 { @include crossing-effect($contrast-color, 5s, fade-3); }
+
+@include keyframes(fade-1) { @include fade-steps(0, 1); }
+@include keyframes(fade-2) { @include fade-steps(0, 1); }
+@include keyframes(fade-3) { @include fade-steps(0, 1); }
