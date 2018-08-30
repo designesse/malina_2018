@@ -1,10 +1,10 @@
-<svg viewBox="0 0 184 104" xmlns="http://www.w3.org/2000/svg">
-  <polygon points="82,104 92,83 102,104" fill="#ddd" />
-  <polygon points="92,100 48,12 52,4 92,84 132,4 136,12" fill="#999" />
-  <polyline points="0,106 52,2 104,106" fill=none stroke="#272890" stroke-width="2" />
-  <polyline fill="#000" opacity=".07" points="2,104 52,4 102,104" />
-  <polyline points="47,12 92,102 137,12" fill=none stroke="#272890" stroke-width="2" />
-  <polyline points="80,106 132,2 184,106" fill=none stroke="#272890" stroke-width="2" />
-  <polyline fill="#000" opacity=".07" points="82,104 132,2 182,104" />
-  <polygon points="92,100 88,92 92,84 96,92" fill="#ffa500" />
+<svg viewBox="0 0 188 108" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="84.5,108 94,89 103.5,108" fill="#ddd" />
+  <polygon points="94,102 50.5,14.5 54,7 94,89 134,7 137.5,14.5" fill="#999" />
+  <polyline points="2,110 54,4 106,110" fill=none stroke="#272890" stroke-width="3" />
+  <polyline points="4,108 54,6 104,108" fill="#000" opacity=".07" />
+  <polyline points="49,14 94,104 139,14" fill=none stroke="#272890" stroke-width="3" />
+  <polyline points="82,110 134,4 186,110" fill=none stroke="#272890" stroke-width="3" />
+  <polyline points="84,108 134,4 184,108" fill="#000" opacity=".07" />
+  <polygon points="94,102 91,95 94,89 97,95" fill="#ffa500" />
 </svg>

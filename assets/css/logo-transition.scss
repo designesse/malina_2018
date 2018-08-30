@@ -47,6 +47,9 @@
   @keyframes #{$animation} { @content; }
 }
 
+.hide-without-transition { visibility: hidden; }
+.show-with-transition { visibility: visible; }
+
 #content {
   font-weight: bold;
   margin: 0 auto;

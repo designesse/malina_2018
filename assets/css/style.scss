@@ -2,10 +2,14 @@
 ---
 @import 'base';
 
-body { color: $text-color; }
+body {
+  color: $text-color;
+  font-family: $font-sans-serif;
+}
 
 a {
-  text-decoration: underline solid #ffa500;
+  text-decoration: none;
+  position: relative;
 
   &:link, &:visited { color: $text-color; }
   &:hover { color: $contrast-color; }
@@ -13,6 +17,27 @@ a {
     display: inline-block;
     transform: translateY(0.2rem);
   }
+  &:after {
+      border: 2px solid rgb(255, 165, 0);
+      border: 2px solid rgba(255, 165, 0, .5);
+      bottom: 0px;
+      border-style: solid;
+      content: '';
+      left: 0;
+      position: absolute;
+      width: 100%;
+  }
+}
+
+h1 {
+  font-family: $font-serif;
+  font-size: 2.8em;
+  margin-top: 0;
+}
+
+h2 {
+  font-family: $font-serif;
+  font-size: 2em;
 }
 
 header {
@@ -27,23 +52,50 @@ header {
   width: 100%;
 }
 
-p { line-height: 1.4em; }
+p {
+  font-size: 1.4em;
+  line-height: 1.4em;
+}
+
+section {
+  margin-bottom: 4em;
+}
 
 .block { display: block; }
 .contrast { color: $contrast-color; }
 .center { margin: 0 auto; text-align: center; }
 .text-center { text-align: center; }
 .hidden { visibility: hidden; }
+.font-med { font-size: 1.8em; }
+.show-with-transition { visibility: hidden; }
+
+#page {
+  margin: 1em 2em;
+}
 
 @media (max-width: 700px) {
+  html { font-size: 12px; }
   header { margin-top: 30px; }
-  p { font-size: 1.4em; margin-left: 30px; }
-  svg { width: 200px; }
-  #content { width: 350px; }
+  svg { width: 300px; }
+  .mid-center {
+    margin: 0 auto;
+    margin-bottom: 4em;
+    width: 600px;
+  }
+  .mid-center { width: 350px; }
 }
 @media (min-width: 700px) {
-  header { margin-top: 100px; }
-  p { font-size: 1.8em; margin-left: 50px; }
-  svg { width: 300px; }
-  #content { width: 500px; }
+  html { font-size: 16px; }
+  header { margin-top: 70px; }
+  svg { width: 400px; }
+  .mid-center {
+    margin: 0 auto;
+    margin-bottom: 4em;
+    width: 500px;
+  }
+  h2, p {
+    margin: 0 auto;
+    margin-bottom: 1em;
+    max-width: 800px;
+  }
 }
