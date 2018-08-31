@@ -78,11 +78,10 @@ section {
   header { margin-top: 30px; }
   svg { width: 300px; }
   .mid-center {
-    margin: 0 auto;
-    margin-bottom: 4em;
-    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
   }
-  .mid-center { width: 350px; }
 }
 @media (min-width: 700px) {
   html { font-size: 16px; }
@@ -94,7 +93,8 @@ section {
     width: 500px;
   }
   h2, p {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 1em;
     max-width: 800px;
   }
