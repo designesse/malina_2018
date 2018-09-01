@@ -54,7 +54,7 @@
   font-weight: bold;
   margin: 0 auto;
   margin-bottom: 150px;
-  @include animation-duration(6s);
+  @include animation-duration(7s);
   @include animation-name(fade-text);
 }
 
@@ -63,14 +63,14 @@
 .left-to-center, .right-to-center, .top-to-center { margin: 0 auto; }
 .left-to-center, .right-to-center {
   color: $text-color;
-  @include animation-duration(1s);
+  @include animation-duration(2s);
 }
 .left-to-center { @include animation-name(left-to-center); }
 .right-to-center { @include animation-name(right-to-center); }
 
 .top-to-center {
   color: $text-color;
-  @include animation-duration(2.5s);
+  @include animation-duration(3.5s);
   @include animation-name(top-to-center);
 }
 
@@ -96,9 +96,9 @@
   to { margin-top: 0; opacity: 1; }
 }
 
-.cross-1 { @include crossing-effect(#ddd, 2s, fade-1); }
-.cross-2 { @include crossing-effect(#999, 3.5s, fade-2); }
-.cross-3 { @include crossing-effect($contrast-color, 5s, fade-3); }
+.cross-1 { @include crossing-effect(#ddd, 3s, fade-1); }
+.cross-2 { @include crossing-effect(#999, 4.5s, fade-2); }
+.cross-3 { @include crossing-effect($contrast-color, 6s, fade-3); }
 
 @include keyframes(fade-1) { @include fade-steps(0, 1); }
 @include keyframes(fade-2) { @include fade-steps(0, 1); }
