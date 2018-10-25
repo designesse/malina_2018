@@ -51,7 +51,6 @@
 .show-with-transition { visibility: visible; }
 
 #content {
-  font-weight: bold;
   margin: 0 auto;
   margin-bottom: 150px;
   @include animation-duration(7s);
