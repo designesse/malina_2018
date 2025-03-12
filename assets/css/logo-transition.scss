@@ -1,0 +1,162 @@
+---
+---
+@import 'base';
+
+
+// General duration, name and keyframes mixins.
+@mixin animation-duration($duration) {
+  @-moz-animation-duration: $duration;
+  @-ms-animation-duration: $duration;
+  @-o-animation-duration: $duration;
+  @-webkit-animation-duration: $duration;
+  animation-duration: $duration;
+}
+@mixin animation-name($animation) {
+  @-moz-animation-name: $animation;
+  @-ms-animation-name: $animation;
+  @-o-animation-name: $animation;
+  @-webkit-animation-name: $animation;
+  animation-name: $animation;
+}
+@mixin keyframes($animation) {
+  @-moz-keyframes #{$animation} { @content; }
+  @-ms-keyframes #{$animation} { @content; }
+  @-o-keyframes #{$animation} { @content; }
+  @-webkit-keyframes #{$animation} { @content; }
+  @keyframes #{$animation} { @content; }
+}
+@mixin crossing-effect($color, $duration, $animation-name) {
+  fill: $color;
+  opacity: 1;
+  @include animation-duration($duration);
+  @include animation-name($animation-name);
+}
+
+
+// Set up left, right and top to center animations.
+.left-to-center, .right-to-center, .top-to-center { margin: 0 auto; }
+.left-to-center, .right-to-center, .top-to-center {
+  @include animation-duration(10s);
+}
+
+
+// Define (first) left to center animation.
+@mixin from-left-steps($marg-l-st, $transx-st, $marg-l-fin, $transx-fin) {
+  0% {
+    margin-left: $marg-l-st;
+    opacity: 0;
+    transform: translateX($transx-st);
+  }
+  20% {
+    margin-left: $marg-l-st;
+    opacity: 0;
+    transform: translateX($transx-st);
+  }
+  30% {
+    margin-left: $marg-l-fin;
+    opacity: 1;
+    transform: translateX($transx-fin);
+  }
+  100% {
+    margin-left: $marg-l-fin;
+    opacity: 1;
+    transform: translateX($transx-fin);
+  }
+}
+@include keyframes(left-to-center) { @include from-left-steps(0%, 0%, 50%, -50%); }
+.left-to-center { @include animation-name(left-to-center); }
+
+
+// Define (second) right to center animation.
+@mixin from-right-steps($marg-r-st, $transx-st, $marg-r-fin, $transx-fin) {
+  0% {
+    margin-right: $marg-r-st;
+    opacity: 0;
+    transform: translateX($transx-st);
+  }
+  30% {
+    margin-right: $marg-r-st;
+    opacity: 0;
+    transform: translateX($transx-st);
+  }
+  40% {
+    margin-right: $marg-r-fin;
+    opacity: 1;
+    transform: translateX($transx-fin);
+  }
+  100% {
+    margin-right: $marg-r-fin;
+    opacity: 1;
+    transform: translateX($transx-fin);
+  }
+}
+@include keyframes(right-to-center) { @include from-right-steps(0%, 0%, 50%, 50%); }
+.right-to-center { @include animation-name(right-to-center); }
+
+
+// Define (third) left+right intersection animation.
+@mixin fade-1-steps($from, $to) {
+  0% { opacity: $from; }
+  40% { opacity: $from; }
+  45% { opacity: $to; }
+  100% { opacity: $to; }
+}
+@include keyframes(fade-1) { @include fade-1-steps(0, 1); }
+.cross-1 { @include crossing-effect(#ddd, 10s, fade-1); }
+
+
+// Define (fourth) top to center animation.
+@include keyframes(top-to-center) {
+  0% {
+    margin-top: -200px;
+    opacity: 0;
+  }
+  45% {
+    margin-top: -200px;
+    opacity: 0;
+  }
+  55% {
+    margin-top: 0;
+    opacity: 1;
+  }
+  100%  {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+.top-to-center { @include animation-name(top-to-center); }
+
+
+// Define (fifth) left+top, right+top intersection animation.
+@mixin fade-2-steps($from, $to) {
+  0% { opacity: $from; }
+  55% { opacity: $from; }
+  60% { opacity: $to; }
+  100% { opacity: $to; }
+}
+@include keyframes(fade-2) { @include fade-2-steps(0, 1); }
+.cross-2 { @include crossing-effect(#999, 10s, fade-2); }
+
+// Define (sixth) left+right+top diamond intersection animation.
+@mixin fade-3-steps($from, $to) {
+  0% { opacity: $from; }
+  60% { opacity: $from; }
+  80% { opacity: $to; }
+  100% { opacity: $to; }
+}
+
+@include keyframes(fade-3) { @include fade-3-steps(0, 1); }
+.cross-3 { @include crossing-effect($contrast-color, 10s, fade-3); }
+
+// Define (sixth) text coloration.
+@mixin fade-4-steps($from, $to) {
+  0% { color: $text-color; }
+  60% { color: $text-color; }
+  80% { color: $contrast-color; }
+  100% { color: $contrast-color; }
+}
+@include keyframes(fade-4) { @include fade-4-steps(0, 1); }
+.color-bold-trans {
+  @include crossing-effect($contrast-color, 10s, fade-4);
+  color: $contrast-color;
+}

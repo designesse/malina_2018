@@ -1,0 +1,115 @@
+---
+---
+@import 'base';
+
+body {
+  color: $text-color;
+  font-family: $font-sans-serif;
+}
+
+a {
+  border-bottom: 2px solid $contrast-color;
+  text-decoration: none;
+  position: relative;
+
+  &:link, &:visited { color: $text-color; }
+  &:hover { color: $contrast-color; }
+  &:active {
+    display: inline-block;
+    transform: translateY(0.2rem);
+  }
+}
+
+footer {
+  color: $light-color;
+  font-size: .7em;
+  margin-top: 7em;
+  padding: 2em 0;
+}
+
+h1 {
+  font-family: $font-serif;
+  font-size: 1.3em;
+  margin-top: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: $font-serif;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+h1, h2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.4em;
+}
+
+#content { font-weight: bold; }
+
+#page {
+  margin: 1em 2em;
+}
+
+#content, #page {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.absolute {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.block { display: block; }
+.center { display: block; margin: 0 auto; text-align: center; }
+.logo-animation { margin: 4em auto; }
+.logo-s svg { width: 30px; }
+.nowrap { white-space: nowrap; }
+.opacity-1 { opacity: .1; }
+.relative { position: relative; }
+.right { float: right; }
+
+@media (min-width: 1000px) {
+  header { margin-top: 70px; }
+  html { font-size: 22px; }
+  svg { width: 200px; }
+
+  #content { width: 500px; }
+  #page { width: 1000px; }
+
+  .logo-animation { height: 120px; }
+}
+
+@media (max-width: 1000px) and (min-width: 700px) {
+  header { margin-top: 70px; }
+  html { font-size: 18px; }
+  svg { width: 200px; }
+
+  #content { width: 450px; }
+  #page { width: 600px; }
+
+  .logo-animation { height: 100px; }
+}
+
+@media (max-width: 700px) {
+  header { margin-top: 30px; }
+  html { font-size: 12px; }
+  svg { width: 150px; }
+
+  #content { max-width: 300px; }
+  #page { padding: 4em; }
+
+  .logo-animation {
+    height: 50px;
+
+    svg { width: 100px; }
+  }
+}
